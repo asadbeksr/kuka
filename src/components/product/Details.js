@@ -150,11 +150,11 @@ const Details = ({
                   </h2>
                   <div className="details-price mb-20">
                     <span>
-                      {Number(product && product.mainPrice).toLocaleString()} so'm
+                      {Number(product && product.mainPrice).toLocaleString()} so&apos;m
                     </span>
                     {product && product.price && (
                       <span className="old-price">
-                        {Number(product.price).toLocaleString()}so'm
+                        {Number(product.price).toLocaleString()}so&apos;m
                       </span>
                     )}
                   </div>
