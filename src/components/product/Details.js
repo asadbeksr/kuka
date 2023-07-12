@@ -102,7 +102,7 @@ const Details = ({
                       </Nav>
                     </div>
                   )}
-                  <div className="product-details-img mb-10">
+                  <div className="product-details-img mb-10 ">
                     <Tab.Content id="myTabContentpro">
                       {product &&
                         product.images.map((img, i) => (
@@ -115,7 +115,7 @@ const Details = ({
                     </Tab.Content>
                   </div>
                   {!upthumb && (
-                    <div className="shop-thumb-tab mb-30">
+                    <div className="shop-thumb-tab mb-30 ">
                       <Nav as="ul">
                         {product &&
                           product.images.map((img, i) => (
