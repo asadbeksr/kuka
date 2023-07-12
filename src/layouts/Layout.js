@@ -37,8 +37,8 @@ const Layout = ({
           whiteMenu={whiteMenu}
         />
       )}
-      <WishListIcon />
-      <CompareIcon />
+      {/* <WishListIcon />
+      <CompareIcon /> */}
 
       {children}
       <Footer

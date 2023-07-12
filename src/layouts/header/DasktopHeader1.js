@@ -110,7 +110,7 @@ const DasktopHeader = ({ whiteMenu }) => {
           <li>
             <Link href="/products">Products </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/blog">
               <a>Blog</a>
             </Link>
@@ -180,7 +180,7 @@ const DasktopHeader = ({ whiteMenu }) => {
                 <Link href="/order-success">Order Success</Link>
               </li>
             </ul>
-          </li>
+          </li> */}
           <li>
             <Link href="/contact">Contact</Link>
           </li>

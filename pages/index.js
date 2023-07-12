@@ -38,7 +38,7 @@ const Index = ({
   return (
     <Layout sticky={true}>
       <main>
-        <section className="slider-area pos-relative">
+        {/* <section className="slider-area pos-relative">
           <div className="slider-active">
             <HomeSlider sliders={home1 && home1.sliders}>
               {home1 &&
@@ -130,7 +130,7 @@ const Index = ({
                 ))}
             </div>
           </div>
-        </section>
+        </section> */}
         <HomePageProducts products={products} />
         {topSeller && (
           <section className="top-seller-area box-90">
@@ -219,10 +219,10 @@ const Index = ({
           </section>
         )}
 
-        <HomePageSingleProduct products={products} />
-        <UpcomingProduct upcomingProduct={upcomingProduct} />
-        {blogs && <Blogs blogs={blogs} />}
-        <Newsletter />
+        {/* <HomePageSingleProduct products={products} /> */}
+        {/* <UpcomingProduct upcomingProduct={upcomingProduct} /> */}
+        {/* {blogs && <Blogs blogs={blogs} />} */}
+        {/* <Newsletter /> */}
       </main>
     </Layout>
   );

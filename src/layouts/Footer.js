@@ -1,12 +1,12 @@
-import Image from "next/image";
-import Link from "next/link";
-import Banner from "../../public/img/banner/add.jpg";
-import Time from "../../public/img/icon/time.png";
-import Logo from "../../public/img/logo/footer-logo.png";
+// import Image from "next/image";
+// import Link from "next/link";
+// import Banner from "../../public/img/banner/add.jpg";
+// import Time from "../../public/img/icon/time.png";
+// import Logo from "../../public/img/logo/footer-logo.png";
 const Footer = ({ container, footerBg, textCenter }) => {
   return (
     <footer>
-      <div
+      {/* <div
         className={`${
           !container
             ? "footer-area box-90 pt-100 pb-60"
@@ -176,7 +176,7 @@ const Footer = ({ container, footerBg, textCenter }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="copyright-area box-105">
         <div className="container-fluid">
           <div className={`${footerBg ? "" : "copyright-border"} pt-30 pb-30`}>
@@ -192,11 +192,7 @@ const Footer = ({ container, footerBg, textCenter }) => {
                   }`}
                 >
                   <p>
-                    Copyright © {new Date().getFullYear()}{" "}
-                    <a href="#" onClick={(e) => e.preventDefault()}>
-                      BasicTheme
-                    </a>
-                    . All Rights Reserved
+                   THE-KUKA.UZ  -  {new Date().getFullYear()}{" "}
                   </p>
                 </div>
               </div>
