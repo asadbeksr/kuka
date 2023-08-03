@@ -70,7 +70,8 @@ function MyApp({ Component, pageProps }) {
           content='THE KUKA, интернет-магазин, носки, классические, удобные, доступные цены, проверенные производители, качество'
         />
 
-        {/* <meta property='og:type' content='website' />
+        <meta property='og:type' content='website' />
+        
         <meta property='og:url' content='https://the-kuka.uz' />
         <meta
           property='og:title'
@@ -78,13 +79,13 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property='og:description'
-          content='THE KUKA - интернет-магазин классических и удобных носков на каждый день.'
+          content='The Kuka - интернет-магазин классических и удобных носков на каждый день. Мы предлагаем качественные носки от проверенных производителей по доступным ценам. Мы клиентоориентированная команда и не оставляем клиента без внимания. Если есть пожелания или замечания, напишите, пожалуйста нам в телеграм - @uzkuka.'
         />
         <meta
           property='og:image'
           content='https://www.the-kuka.uz/img/logo/logo.png'
         />
-         */}
+        
 
         <meta property='og:site_name' content='THE KUKA' />
 
@@ -95,7 +96,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           name='twitter:description'
-          content='THE KUKA - интернет-магазин классических и удобных носков на каждый день.'
+          content='The Kuka - интернет-магазин классических и удобных носков на каждый день. Мы предлагаем качественные носки от проверенных производителей по доступным ценам. Мы клиентоориентированная команда и не оставляем клиента без внимания. Если есть пожелания или замечания, напишите, пожалуйста нам в телеграм - @uzkuka.'
         />
         <meta
           name='twitter:image'

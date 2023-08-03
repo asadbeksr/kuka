@@ -19,7 +19,6 @@ const Products = ({ getProducts, products }) => {
       <main>
         <section className='shop-area pt-4'>
           <div className='container'>
-            <h1> Ilhom Kot</h1>
             <div className='row'>
               <div className='col-xl-12'>
                 {/* tab filter */}
