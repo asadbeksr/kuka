@@ -85,6 +85,7 @@ function MyApp({ Component, pageProps }) {
           content='https://www.the-kuka.uz/img/logo/logo.png'
         />
          */}
+
         <meta property='og:site_name' content='THE KUKA' />
 
         <meta name='twitter:card' content='summary_large_image' />
@@ -136,16 +137,18 @@ function MyApp({ Component, pageProps }) {
         />
 
         <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-LENYVL2JK3'
+        ></script>
+
+        <script
           dangerouslySetInnerHTML={{
-            __html: `<!-- Google tag (gtag.js) -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-LENYVL2JK3"></script>
-          <script>
+            __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
           
             gtag('config', 'G-LENYVL2JK3');
-          </script>
             `,
           }}
         />
