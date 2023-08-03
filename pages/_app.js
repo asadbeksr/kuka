@@ -69,7 +69,7 @@ function MyApp({ Component, pageProps }) {
           name='keywords'
           content='THE KUKA, интернет-магазин, носки, классические, удобные, доступные цены, проверенные производители, качество'
         />
-        
+
         {/* <meta property='og:type' content='website' />
         <meta property='og:url' content='https://the-kuka.uz' />
         <meta
@@ -99,13 +99,56 @@ function MyApp({ Component, pageProps }) {
         <meta
           name='twitter:image'
           content='https://www.the-kuka.uz/img/logo/logo.png'
-        />   
-        
-        {/* Include the Yandex.Metrika script here */}
-          <script src="/metrika.js" async />
+        />
 
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: `{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://www.the-kuka.uz/",
+            "logo": "https://www.the-kuka.uz/img/logo/logo.png"
+          }`,
+          }}
+        />
 
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `// public/metrika.js
+          (function(m,e,t,r,i,k,a){
+              m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+              m[i].l=1*new Date();
+              for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) { return; }
+              }
+              k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+            })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            
+            ym(94525697, "init", {
+              clickmap: true,
+              trackLinks: true,
+              accurateTrackBounce: true,
+              webvisor: true
+            });
+            `,
+          }}
+        />
 
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `<!-- Google tag (gtag.js) -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-LENYVL2JK3"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-LENYVL2JK3');
+          </script>
+            `,
+          }}
+        />
       </Head>
       {preloader ? <PreLoader /> : <ScrollTop />}
       <AllToaster />
