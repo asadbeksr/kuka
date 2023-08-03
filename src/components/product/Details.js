@@ -81,6 +81,7 @@ const Details = ({
         <title>{product && product.nameRu}</title>
         <meta name='description' content={product && product.description} />
         <meta name='keywords' content={product && product.nameRu} />
+        
         <meta property='og:title' content={product && product.nameRu} />
         <meta
           property='og:description'

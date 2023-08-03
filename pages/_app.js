@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }) {
       new WOW.WOW().init();
     }, 2000);
   }, []);
+
   return (
     <Provider store={store}>
       <Head>
@@ -68,7 +69,8 @@ function MyApp({ Component, pageProps }) {
           name='keywords'
           content='THE KUKA, интернет-магазин, носки, классические, удобные, доступные цены, проверенные производители, качество'
         />
-        <meta property='og:type' content='website' />
+        
+        {/* <meta property='og:type' content='website' />
         <meta property='og:url' content='https://the-kuka.uz' />
         <meta
           property='og:title'
@@ -82,8 +84,7 @@ function MyApp({ Component, pageProps }) {
           property='og:image'
           content='https://www.the-kuka.uz/img/logo/logo.png'
         />
-        <meta property='og:image:width' content='1200' />
-        <meta property='og:image:height' content='630' />
+         */}
         <meta property='og:site_name' content='THE KUKA' />
 
         <meta name='twitter:card' content='summary_large_image' />
@@ -98,7 +99,13 @@ function MyApp({ Component, pageProps }) {
         <meta
           name='twitter:image'
           content='https://www.the-kuka.uz/img/logo/logo.png'
-        />
+        />   
+        
+        {/* Include the Yandex.Metrika script here */}
+          <script src="/metrika.js" async />
+
+
+
       </Head>
       {preloader ? <PreLoader /> : <ScrollTop />}
       <AllToaster />
