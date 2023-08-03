@@ -76,7 +76,7 @@ const Filter = ({
           funtion={filterByBrand}
           setActive_={setActive_}
         />
-        <PriceFilter filterByPrice={filterByPrice} setActive_={setActive_} />
+        {/* <PriceFilter filterByPrice={filterByPrice} setActive_={setActive_} /> */}
         <FilterByCheckBox
           title="Product Size"
           arr={size}

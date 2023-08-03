@@ -112,7 +112,7 @@ const Product = ({
           </a>
         </div> */}
         <div className="sale-tag">
-          {product.new && <span className="new">Chilla Bozor</span>}
+          {/* {product.new && <span className="new">Chilla Bozor</span>} */}
           {/* {product.sale && <span className="sale">sale</span>} */}
         </div>
       </div>

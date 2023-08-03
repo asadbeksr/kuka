@@ -3,7 +3,7 @@ const DasktopHeader = ({ whiteMenu }) => {
   return (
     <div className={`main-menu text-center ${whiteMenu ? "menu-white" : ""}`}>
       <nav id="mobile-menu">
-        <ul>
+        {/* <ul>
           <li>
             <Link href="/">
               <a>Home</a>
@@ -110,7 +110,7 @@ const DasktopHeader = ({ whiteMenu }) => {
           <li>
             <Link href="/products">Products </Link>
           </li>
-          {/* <li>
+          <li>
             <Link href="/blog">
               <a>Blog</a>
             </Link>
@@ -180,11 +180,11 @@ const DasktopHeader = ({ whiteMenu }) => {
                 <Link href="/order-success">Order Success</Link>
               </li>
             </ul>
-          </li> */}
+          </li>
           <li>
             <Link href="/contact">Contact</Link>
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </div>
   );

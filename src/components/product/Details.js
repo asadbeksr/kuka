@@ -114,6 +114,7 @@ const Details = ({
                         ))}
                     </Tab.Content>
                   </div>
+
                   {!upthumb && (
                     <div className="shop-thumb-tab mb-30 ">
                       <Nav as="ul">
@@ -133,6 +134,7 @@ const Details = ({
                       </Nav>
                     </div>
                   )}
+                  
                 </Tab.Container>
               </div>
               <div className="col-xl-6 col-lg-8">
@@ -293,7 +295,9 @@ const Details = ({
                       </div>
                       <div
                         className="details-cart mt-40"
-                        onClick={() => addToCart(product)}
+                        onClick={() => {
+                          window.location.href = product.link;
+                        }}
                       >
                         <button className="btn theme-btn">purchase now</button>
                       </div>

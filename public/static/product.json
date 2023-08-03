@@ -18,7 +18,8 @@
     "stock": true,
     "id": "21",
     "new": true,
-    "sale": true
+    "sale": true,
+    "link": "https://uzum.uz/uz/product/ayollar-va-erkaklar-333090"
   },
   {
     "name": "Kalta paypoq ayollar va erkaklar uchun, pyatki paxtadan",
@@ -40,7 +41,8 @@
     "stock": true,
     "id": "1",
     "new": true,
-    "sale": true
+    "sale": true,
+    "link": "https://uzum.uz/uz/product/kalta-paypoq-ayollar-412056"
   },
   {
     "name": "Kalta paypoq ayollar va erkaklar uchun, pyatki paxtadan",
@@ -69,7 +71,8 @@
     "colors": ["gray", "black"],
     "stock": true,
     "id": "20",
-    "size": "XL"
+    "size": "XL",
+    "link":"https://uzum.uz/uz/product/kalta-paypoq-ayollar-349031"
   },
   {
     "name": "Paypoq erkaklar uchun Limax paxtadan ishga klassik, yozga, qora ",
@@ -90,7 +93,8 @@
     "colors": ["white", "black"],
     "stock": true,
     "size": "M",
-    "id": "22"
+    "id": "22",
+    "link":"https://uzum.uz/uz/product/paypoq-erkaklar-uchun-370431"
   },
   {
     "name": "Erkaklar paypoqlari, paxtadan kalta, yozga Pierre Carden",
@@ -111,7 +115,8 @@
     "size": "X",
     "colors": ["white", "black"],
     "stock": true,
-    "id": "16"
+    "id": "16",
+    "link":"https://uzum.uz/uz/product/erkalar-paypoqlari-pierre-402938"
   },
   {
     "name": "Ayollar kalta paypoqlari Avakado bosmasi bilan, paxtadan har kunlik",
@@ -132,7 +137,8 @@
     "size": "XXL",
     "colors": ["gray", "black"],
     "stock": false,
-    "id": "17"
+    "id": "17",
+    "link":"https://uzum.uz/uz/product/ayollar-kalta-paypoqlari-399987"
   },
   {
     "name": "Erkaklar Turkiya paypoqlari Dandi, kalta oq, bambukdan",
@@ -153,7 +159,8 @@
     "brand": "The Kuka",
     "size": "XL",
     "stock": true,
-    "id": "18"
+    "id": "18", 
+    "link":"https://uzum.uz/uz/product/ayollar-va-erkaklar-333090"
   },
   {
     "name": "Erkaklar uchun paypoqlar Mudomay, klassik, bambukdan, Turkiya",
@@ -173,7 +180,8 @@
     "brand": "The Kuka",
     "stock": true,
     "id": "4",
-    "sale": true
+    "sale": true,
+    "link":"https://uzum.uz/uz/product/erkaklar-uchun-paypoqlar-435584?skuid=838106"
   },
   {
     "name": "Erkaklar kalta paypoqlar Mudomay, bambukdan Turkiya",
@@ -193,7 +201,8 @@
     "tags": ["furniture", "lamp"],
     "brand": "The Kuka",
     "stock": false,
-    "id": "5"
+    "id": "5",
+    "link":"https://uzum.uz/uz/product/erkaklar-kalta-paypoqlar-449992"
   },
   {
     "name": "Ayollar kalta paypoqlari Smile bosmasi bilan, rangli, kundalikka sportga uyga paxtadan",
@@ -213,7 +222,8 @@
     "tags": ["furniture", "chair"],
     "brand": "The Kuka",
     "stock": true,
-    "id": "6"
+    "id": "6",
+    "link":"https://uzum.uz/uz/product/ayollar-kalta-paypoqlari-399961"
   },
   {
     "name": "Ayollar va erkaklar paypoqlari, ortacha uzunlaikda, paxta",
@@ -221,8 +231,7 @@
     "img1": "https://images.uzum.uz/cibk4c3ltlh4bk4mf2k0/original.jpg",
     "img2": "https://images.uzum.uz/cibk4c3ltlh4bk4mf2k0/original.jpg",
     "images": [
-      { "src": "https://images.uzum.uz/cibk4c3ltlh4bk4mf2k0/original.jpg" },
-      { "src": "https://images.uzum.uz/cibk4c3ltlh4bk4mf2k0/original.jpg" },
+     
       { "src": "https://images.uzum.uz/cibk4c3ltlh4bk4mf2k0/original.jpg" }
     ],
     "price": "20000",
@@ -234,27 +243,8 @@
     "brand": "The Kuka",
     "stock": true,
     "id": "7",
-    "new": true
-  },
-  {
-    "name": "Ayollar kalta paypoqlari, pyatki paxtadan",
-    "nameRu": "Носки- следки короткие женские, пятки из хлопка неведимки",
-    "img1": "https://images.uzum.uz/chmt36bltlh4bk4k7ad0/original.jpg",
-    "img2": "https://images.uzum.uz/cheh5l7hj8jf3edh7v70/original.jpg",
-    "images": [
-      { "src": "https://images.uzum.uz/chobsqv5d7kom1tgglpg/original.jpg" },
-      { "src": "https://images.uzum.uz/ch8ijfv3jia9r0835qj0/original.jpg" },
-      { "src": "https://images.uzum.uz/chobsnd40v9pplt2hutg/original.jpg" }
-    ],
-    "price": "15000",
-    "mainPrice": "8000",
-    "discount": "20",
-    "colors": [],
-    "category": ["furniture", "chair"],
-    "tags": ["furniture", "chair"],
-    "brand": "The Kuka",
-    "stock": true,
-    "id": "8"
+    "new": true,
+    "link":"https://uzum.uz/uz/product/erkaklar-va-ayollar-564108"
   },
   {
     "name": "Ayollar kundalia kalta paypoqlari paxtadan Xitoy fabrika",
@@ -274,27 +264,7 @@
     "tags": ["furniture", "chair"],
     "brand": "The Kuka",
     "stock": true,
-    "id": "9"
-  },
-  {
-    "name": "Erkaklar paypoqlari, klassik",
-    "nameRu": "Мужские носки высокие, классические",
-    "img1": "https://images.uzum.uz/chjh7fj6edfostif5qp0/original.jpg",
-    "img2": "https://images.uzum.uz/chjh7fj6edfostif5qp0/original.jpg",
-    "images": [
-      { "src": "https://images.uzum.uz/chjh7fj6edfostif5qp0/original.jpg" },
-      { "src": "https://images.uzum.uz/chjh7fj6edfostif5qp0/original.jpg" },
-      { "src": "https://images.uzum.uz/chjh7fj6edfostif5qp0/original.jpg" }
-    ],
-    "mainPrice": "20000",
-    "discount": "20",
-    "colors": [],
-    "category": ["furniture", "chair"],
-    "tags": ["furniture", "chair"],
-    "brand": "The Kuka",
-    "stock": true,
-    "id": "10",
-    "new": true,
-    "sale": true
+    "id": "9",
+    "link": "https://uzum.uz/uz/product/ayollar-kundalia-kalta-368184"
   }
 ]
