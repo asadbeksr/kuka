@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <Head>
-        <meta charSet='utf-8' />
+        <meta charset='utf-8' />
         <meta
           name='viewport'
           content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
@@ -59,25 +59,46 @@ function MyApp({ Component, pageProps }) {
           href='/img/favicons/android-chrome-512x512.png'
         />
 
-        <title>THE KUKA</title>
-        <meta name='description' content="THE KUKA UZ" />
+        <title>THE KUKA - интернет-магазин носков</title>
+        <meta
+          name='description'
+          content='THE KUKA - интернет-магазин классических и удобных носков на каждый день.'
+        />
         <meta
           name='keywords'
-          content='portfolio, creative, unique, inspiring, react, next, software engineer, javascript, developer, frontend, asadbek, savronov, asadbek savronov,  udevs, udevs.io'
+          content='THE KUKA, интернет-магазин, носки, классические, удобные, доступные цены, проверенные производители, качество'
         />
         <meta property='og:type' content='website' />
-        <meta property='og:url' content="the-kuka.uz" />
-        <meta property='og:title' content="THE KUKA" />
-        <meta property='og:description' content="THE KUKA UZ" />
-        {/* <meta property='og:image' content={image} /> */}
-        <meta property='og:site_name' content="THE KUKA" />
+        <meta property='og:url' content='https://the-kuka.uz' />
+        <meta
+          property='og:title'
+          content='THE KUKA - интернет-магазин носков'
+        />
+        <meta
+          property='og:description'
+          content='THE KUKA - интернет-магазин классических и удобных носков на каждый день.'
+        />
+        <meta
+          property='og:image'
+          content='https://www.the-kuka.uz/img/logo/logo.png'
+        />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
+        <meta property='og:site_name' content='THE KUKA' />
 
-        {/* <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content={title} />
-        <meta name='twitter:description' content={description} />
-        <meta name='twitter:image' content={image} />
-        <meta name='twitter:site' content={`@${twitterUsername}`} />
-        <meta name='twitter:creator' content={`@${twitterUsername}`} /> */}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta
+          name='twitter:title'
+          content='THE KUKA - интернет-магазин носков'
+        />
+        <meta
+          name='twitter:description'
+          content='THE KUKA - интернет-магазин классических и удобных носков на каждый день.'
+        />
+        <meta
+          name='twitter:image'
+          content='https://www.the-kuka.uz/img/logo/logo.png'
+        />
       </Head>
       {preloader ? <PreLoader /> : <ScrollTop />}
       <AllToaster />
