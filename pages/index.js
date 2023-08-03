@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
-import { Nav, TabContainer, TabContent, TabPane } from "react-bootstrap";
-import { connect } from "react-redux";
-import Paggination from "../src/components/Paggination";
-import Product from "../src/components/product/Product";
-import ProductListView from "../src/components/product/ProductListView";
-import Layout from "../src/layouts/Layout";
-import { getProducts } from "../src/redux/action/product";
-import { activeData, dblock } from "../src/utils/utils";
+import { useEffect, useState } from 'react';
+import { Nav, TabContainer, TabContent, TabPane } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import Paggination from '../src/components/Paggination';
+import Product from '../src/components/product/Product';
+import ProductListView from '../src/components/product/ProductListView';
+import Layout from '../src/layouts/Layout';
+import { getProducts } from '../src/redux/action/product';
+import { activeData, dblock } from '../src/utils/utils';
 
 const Products = ({ getProducts, products }) => {
   const [active, setActive] = useState(0);
@@ -17,58 +17,59 @@ const Products = ({ getProducts, products }) => {
   return (
     <Layout sticky container footerBg textCenter>
       <main>
-        <section className="shop-area pt-4">
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-12">
+        <section className='shop-area pt-4'>
+          <div className='container'>
+            <h1> Ilhom Ko't</h1>
+            <div className='row'>
+              <div className='col-xl-12'>
                 {/* tab filter */}
-                <TabContainer defaultActiveKey="grid">
-                  <div className="row">
-                    <div className="col-xl-5 col-lg-5 col-md-6">
-                      <div className="product-showing mb-40">
+                <TabContainer defaultActiveKey='grid'>
+                  <div className='row'>
+                    <div className='col-xl-5 col-lg-5 col-md-6'>
+                      <div className='product-showing mb-40'>
                         {/* Active sort product */}
                         <p>{activeData(active, sort, products)}</p>
                       </div>
                     </div>
-                    <div className="col-xl-7 col-lg-7 col-md-6">
-                      <div className="shop-tab f-right">
+                    <div className='col-xl-7 col-lg-7 col-md-6'>
+                      <div className='shop-tab f-right'>
                         <Nav
-                          as="ul"
-                          className="nav text-center"
-                          id="myTab"
-                          role="tablist"
+                          as='ul'
+                          className='nav text-center'
+                          id='myTab'
+                          role='tablist'
                         >
-                          <Nav.Item as="li">
+                          <Nav.Item as='li'>
                             <Nav.Link
-                              as="a"
-                              href="#"
+                              as='a'
+                              href='#'
                               onClick={(e) => e.preventDefault()}
-                              eventKey="list"
+                              eventKey='list'
                             >
-                              <i className="fas fa-list-ul" />{" "}
+                              <i className='fas fa-list-ul' />{' '}
                             </Nav.Link>
                           </Nav.Item>
-                          <Nav.Item as="li">
+                          <Nav.Item as='li'>
                             <Nav.Link
-                              as="a"
-                              href="#"
+                              as='a'
+                              href='#'
                               onClick={(e) => e.preventDefault()}
-                              eventKey="grid"
+                              eventKey='grid'
                             >
-                              <i className="fas fa-th-large" />
+                              <i className='fas fa-th-large' />
                             </Nav.Link>
                           </Nav.Item>
                         </Nav>
                       </div>
-                      <div className="pro-filter-btn mb-40 f-right">
+                      <div className='pro-filter-btn mb-40 f-right'>
                         {/* <button id="filter-btn">Filter +</button> */}
                       </div>
                     </div>
                   </div>
                   {/* tab content */}
                   <TabContent>
-                    <TabPane eventKey="grid">
-                      <div className="row">
+                    <TabPane eventKey='grid'>
+                      <div className='row'>
                         {products &&
                           products.map((product, i) => (
                             <div
@@ -84,7 +85,7 @@ const Products = ({ getProducts, products }) => {
                           ))}
                       </div>
                     </TabPane>
-                    <TabPane eventKey="list">
+                    <TabPane eventKey='list'>
                       {products &&
                         products.map((product, i) => (
                           <div key={i} className={`${dblock(active, i, sort)}`}>
