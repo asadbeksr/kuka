@@ -50,7 +50,7 @@ const SearchTrigger = ({ filterByName }) => {
                 <input
                   type="search"
                   className="main-search-input"
-                  placeholder="Search Entire Store..."
+                  placeholder="Mahsulotlarni qidirish..."
                   onChange={(e) => filterByName(e.target.value)}
                 />
               </div>

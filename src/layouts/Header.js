@@ -28,7 +28,7 @@ const Header = ({
       }`}
     >
       <div
-        className="header-area box-90"
+        className="header-area box-90  "
         id={`${sticky ? "header-sticky" : ""}`}
       >
         <div className={`${container ? "container" : "container-fluid"}`}>

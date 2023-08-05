@@ -28,8 +28,10 @@ const ProductListView = ({ product, col5, addToCart, addWishlist }) => {
     }
   };
 
+  const onRedirect = () => (window.location.href = product.link);
+
   return (
-    <div className="row">
+    <div className="row mt-4 " >
       <ProductModal
         show={quickView}
         handleClose={() => setQuickView(false)}
@@ -48,49 +50,49 @@ const ProductListView = ({ product, col5, addToCart, addWishlist }) => {
                 />
               </a>
             </Link>
-            <div className="sale-tag">
+            {/* <div className="sale-tag">
               {product.new && <span className="new">new</span>}
               {product.sale && <span className="sale">sale</span>}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       <div className={`col-xl-${col5 ? 7 : 8} col-lg-${col5 ? 7 : 8}`}>
         <div className="product-content pro-list-content pr-0 mb-50">
-          <div className="pro-cat mb-10">
+          {/* <div className="pro-cat mb-10">
             <Link href={`/shop/${product.id}`}>decor, </Link>
             <Link href={`/shop/${product.id}`}>{product.brand}</Link>
-          </div>
+          </div> */}
           <h4>
             <Link href={`/shop/${product.id}`}>{product.name}</Link>
           </h4>
           <div className="product-meta mb-10">
             <div className="pro-price">
-              <span>{`$${Number(product.mainPrice).toFixed(2)} USD`}</span>
+              <span>{`${Number(product.mainPrice).toFixed(2)} SO'M`}</span>
               {product.price && (
                 <span className="old-price">
-                  {`$${Number(product.price).toFixed(2)} USD`}
+                  {`${Number(product.price).toFixed(2)} SO'M`}
                 </span>
               )}
             </div>
           </div>
-          <p>
+          {/* <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
             dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
             aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
             eos qui ratione voluptatem sequi nesciunt.
-          </p>
+          </p> */}
           <div className="product-action">
-            <a href="#" title="Shoppingb Cart" onClick={(e) => onClickCart(e)}>
+            <a href="#" title="Shoppingb Cart" onClick={onRedirect}>
               <i className="flaticon-shopping-cart" />
             </a>
             <a
               href="#"
               onClick={(e) => {
                 e.preventDefault();
-                setQuickView(true);
+                onRedirect()
               }}
             >
               <i className="flaticon-eye" />
@@ -102,7 +104,7 @@ const ProductListView = ({ product, col5, addToCart, addWishlist }) => {
                   ? "active"
                   : ""
               } `}
-              onClick={(e) => onClickWishlist(e)}
+              onClick={onRedirect}
             >
               <i className="flaticon-like" />
             </a>

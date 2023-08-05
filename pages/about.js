@@ -17,7 +17,7 @@ const About = () => {
   return (
     <Layout sticky footerBg textCenter container>
       <main>
-        <PageTitle pageHeading="About Us" active="About" />
+        <PageTitle pageHeading="Biz haqimizda" active="About" />
         {popup && <VideoPopUp closePopup={() => setPopup(false)} />}
         <section className="about-area pt-100">
           <div className="container">
@@ -25,45 +25,18 @@ const About = () => {
               <div className="col-xl-5">
                 <div className="section-title mb-25">
                   <p>
-                    <span /> Community
                   </p>
-                  <h1>Get Every Updates</h1>
+                  <h1>THE KUKA</h1>
                 </div>
                 <div className="about-community mb-30">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    ali qua. Ut enim ad minim veniam, quis nostrud exercit ation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor veniam.
+                Qulay va ommabop paypoqlar onlayn-do&apos;koni. Biz ishonchli ishlab chiqaruvchilarning sifatli paypoqlarini arzon narxlarda taklif qilamiz. Biz mijozlarimizni tinglaymiz. Savol yoki taklifingiz bo&apos;lsa, iltimos, telegramda murojat qiling - @uzkuka
                   </p>
                 </div>
               </div>
-              <div className="col-xl-7">
-                <div className="about-community-text mb-30">
-                  <p>
-                    Vue is an Ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor.
-                  </p>
-                  <p>
-                    Korem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris.
-                  </p>
-                </div>
-              </div>
+     
             </div>
-            <div className="row">
+            {/* <div className="row">
               <div className="col-12">
                 <div className="overview text-center mt-90">
                   <p>
@@ -74,10 +47,10 @@ const About = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
-        <section className="video-area">
+        {/* <section className="video-area">
           <div className="bakix-video">
             <img src="img/bg/video.jpg" alt="Image" />
             <a className="popup-video" onClick={() => setPopup(true)} href="#">
@@ -123,8 +96,8 @@ const About = () => {
               </div>
             </div>
           </div>
-        </section>
-        <section className="big-team-area">
+        </section> */}
+        {/* <section className="big-team-area">
           <div className="big-image">
             <img src="img/bg/banner.jpg" alt="Banner" />
           </div>
@@ -154,15 +127,14 @@ const About = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         {/* team-area start */}
         <section className="team-area pt-100 pb-70">
           <div className="container">
             <div className="row">
               <div className="col-xl-12">
                 <div className="area-title text-center mb-50">
-                  <h2>Awesome Team</h2>
-                  <p>Our one of the best team members</p>
+                  <h2>Jamoa</h2>
                 </div>
               </div>
             </div>

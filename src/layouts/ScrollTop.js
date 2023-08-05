@@ -25,6 +25,7 @@ const ScrollTop = () => {
       style={{
         position: "fixed",
         zIndex: 2147483647,
+        backgroundColor: "#7000FF",
         display: scrollTop ? "block" : "none",
       }}
     >

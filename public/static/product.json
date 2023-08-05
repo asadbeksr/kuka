@@ -71,7 +71,6 @@
     "colors": ["gray", "black"],
     "stock": true,
     "id": "20",
-    "size": "XL",
     "link":"https://uzum.uz/uz/product/kalta-paypoq-ayollar-349031"
   },
   {
@@ -92,7 +91,6 @@
     "brand": "The Kuka",
     "colors": ["white", "black"],
     "stock": true,
-    "size": "M",
     "id": "22",
     "link":"https://uzum.uz/uz/product/paypoq-erkaklar-uchun-370431"
   },
@@ -112,7 +110,6 @@
     "category": ["ladies", "clothing", "jacket"],
     "tags": ["ladies", "clothing", "jacket"],
     "brand": "The Kuka",
-    "size": "X",
     "colors": ["white", "black"],
     "stock": true,
     "id": "16",
@@ -134,9 +131,8 @@
     "category": ["ladies", "clothing", "jacket"],
     "tags": ["ladies", "clothing", "jacket"],
     "brand": "",
-    "size": "XXL",
     "colors": ["gray", "black"],
-    "stock": false,
+    "stock": true,
     "id": "17",
     "link":"https://uzum.uz/uz/product/ayollar-kalta-paypoqlari-399987"
   },
@@ -157,7 +153,6 @@
     "tags": ["ladies", "clothing", "jacket"],
     "colors": ["rad", "gray"],
     "brand": "The Kuka",
-    "size": "XL",
     "stock": true,
     "id": "18", 
     "link":"https://uzum.uz/uz/product/ayollar-va-erkaklar-333090"
@@ -189,9 +184,10 @@
     "img1": "https://images.uzum.uz/chr5fs56sfhndlbn8590/original.jpg",
     "img2": "https://images.uzum.uz/chib6rj6edfostif2870/original.jpg",
     "images": [
-      { "src": "/img/product/pro2.jpg" },
-      { "src": "/img/product/pro4.jpg" },
-      { "src": "/img/product/pro8.jpg" }
+      { "src": "https://images.uzum.uz/chr5fs56sfhndlbn8590/original.jpg" },
+      { "src": "https://images.uzum.uz/chib6rj6edfostif2870/original.jpg" },
+      { "src": "https://images.uzum.uz/chib4tdenntd8rf9itkg/original.jpg" },
+      { "src": "https://images.uzum.uz/chib7g56sfhndlbmc3pg/original.jpg" }
     ],
     "price": "70000",
     "mainPrice": "32000",
@@ -200,7 +196,7 @@
     "category": ["furniture", "lamp"],
     "tags": ["furniture", "lamp"],
     "brand": "The Kuka",
-    "stock": false,
+    "stock": true,
     "id": "5",
     "link":"https://uzum.uz/uz/product/erkaklar-kalta-paypoqlar-449992"
   },

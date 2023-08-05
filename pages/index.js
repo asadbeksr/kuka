@@ -27,10 +27,10 @@ const Products = ({ getProducts, products }) => {
                     <div className='col-xl-5 col-lg-5 col-md-6'>
                       <div className='product-showing mb-40'>
                         {/* Active sort product */}
-                        <p>{activeData(active, sort, products)}</p>
+                        {/* <p>{activeData(active, sort, products)}</p> */}
                       </div>
                     </div>
-                    <div className='col-xl-7 col-lg-7 col-md-6'>
+                    <div className='col-xl-7 col-lg-7 col-md-6 mb-4'>
                       <div className='shop-tab f-right'>
                         <Nav
                           as='ul'

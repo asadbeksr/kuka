@@ -1,4 +1,4 @@
-import Slider from "react-slick";
+import Slider from 'react-slick';
 const RelatedProduct = ({ children }) => {
   const settings = {
     dots: false,
@@ -34,19 +34,33 @@ const RelatedProduct = ({ children }) => {
     ],
   };
   return (
-    <section className="product-area pb-100">
-      <div className="container">
-        <div className="row">
-          <div className="col-xl-12">
-            <div className="area-title text-center mb-50">
-              <h2>Releted Products</h2>
-              <p>Browse the huge variety of our products</p>
+    <section className='product-area pb-100'>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-xl-12'>
+            <div className='area-title text-center mb-25'>
+              <h2>Oʻxshash mahsulotlar</h2>
+          
             </div>
           </div>
         </div>
-        <div className="product-slider-2 owl-carousel">
+
+        <div className='product-slider-2 owl-carousel'>
           <Slider {...settings}>{children}</Slider>
         </div>
+        <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '20px',
+                  gap: '24px',
+                  color: '#E95F5D',
+                }}
+              >
+                <i className='fas fa-arrow-left' />
+                <i className='fas fa-arrow-right' />
+              </div>
       </div>
     </section>
   );

@@ -49,31 +49,33 @@ const Details = ({
     wishlists.find((wishlist) => wishlist.id === product.id);
   const size = ['L', 'M', 'X', 'XL', 'XXL'];
 
-  const [addCart, setaddCart] = useState(false);
-  const [addWishlist_, setAddWishlist_] = useState(false);
+  // const [addCart, setaddCart] = useState(false);
+  // const [addWishlist_, setAddWishlist_] = useState(false);
 
-  const onClickCart = (e) => {
-    e.preventDefault();
-    addToCart(product);
-    setaddCart(true);
-    toast.success('Add item in Cart.');
-  };
-  const onClickRemoveCart = (e) => {
-    e.preventDefault();
-    decreaseCart(cart);
-    setaddCart(true);
-    toast.error('Remove item from Cart.');
-  };
-  const onClickWishlist = (e) => {
-    e.preventDefault();
-    addWishlist(product);
-    setAddWishlist_(true);
-    if (wishlist) {
-      toast.error('Remove item in wishlist.');
-    } else {
-      toast.success('Add item in wishlist.');
-    }
-  };
+  // const onClickCart = (e) => {
+  //   e.preventDefault();
+  //   addToCart(product);
+  //   setaddCart(true);
+  //   toast.success('Add item in Cart.');
+  // };
+  // const onClickRemoveCart = (e) => {
+  //   e.preventDefault();
+  //   decreaseCart(cart);
+  //   setaddCart(true);
+  //   toast.error('Remove item from Cart.');
+  // };
+  // const onClickWishlist = (e) => {
+  //   e.preventDefault();
+  //   addWishlist(product);
+  //   setAddWishlist_(true);
+  //   if (wishlist) {
+  //     toast.error('Remove item in wishlist.');
+  //   } else {
+  //     toast.success('Add item in wishlist.');
+  //   }
+  // };
+
+  const onRedirect = () => (window.location.href = product.link);
 
   return (
     <>
@@ -81,7 +83,7 @@ const Details = ({
         <title>{product && product.nameRu}</title>
         <meta name='description' content={product && product.description} />
         <meta name='keywords' content={product && product.nameRu} />
-        
+
         <meta property='og:title' content={product && product.nameRu} />
         <meta
           property='og:description'
@@ -155,62 +157,63 @@ const Details = ({
       <Layout sticky container footerBg textCenter>
         <main>
           {/* <PageTitle active="SHOP DETAILS" pageHeading="Our Shop" /> */}
-          <section className='shop-details-area pt-100 pb-100'>
+          <section className='shop-details-area pt-50 pb-100'>
             <div className='container'>
               <div className='row'>
                 <div className='col-xl-6 col-lg-4'>
                   <Tab.Container defaultActiveKey='tum-0'>
-                    {upthumb && (
-                      <div className='shop-thumb-tab'>
-                        <Nav as='ul'>
-                          {product &&
-                            product.images.map((img, i) => (
-                              <Nav.Item as='li' key={i}>
-                                <Nav.Link
-                                  as='a'
-                                  href='#'
-                                  onClick={(e) => e.preventDefault()}
-                                  eventKey={`tum-${i}`}
-                                >
-                                  <img src={img.src} alt='Tum' />{' '}
-                                </Nav.Link>
-                              </Nav.Item>
-                            ))}
-                        </Nav>
-                      </div>
-                    )}
-                    <div className='product-details-img mb-10 '>
-                      <Tab.Content id='myTabContentpro'>
-                        {product &&
-                          product.images.map((img, i) => (
-                            <Tab.Pane key={i} eventKey={`tum-${i}`}>
-                              <div className='product-large-img'>
-                                <img src={img.src} alt='tum' />
-                              </div>
-                            </Tab.Pane>
-                          ))}
-                      </Tab.Content>
-                    </div>
+                    <div className='product-container'>
+                      {upthumb && (
+                        <div className='shop-thumb-tab'>
+                          <Nav as='ul'>
+                            {product &&
+                              product.images.map((img, i) => (
+                                <Nav.Item as='li' key={i}>
+                                  <Nav.Link
+                                    as='a'
+                                    href='#'
+                                    onClick={(e) => e.preventDefault()}
+                                    eventKey={`tum-${i}`}
+                                  >
+                                    <img src={img.src} alt='Tum' />
+                                  </Nav.Link>
+                                </Nav.Item>
+                              ))}
+                          </Nav>
+                        </div>
+                      )}
 
-                    {!upthumb && (
-                      <div className='shop-thumb-tab mb-30 '>
-                        <Nav as='ul'>
+                      <div className='img-wrapper'>
+                        <Tab.Content id='myTabContentpro'>
                           {product &&
                             product.images.map((img, i) => (
-                              <Nav.Item as='li' key={i}>
-                                <Nav.Link
-                                  as='a'
-                                  href='#'
-                                  onClick={(e) => e.preventDefault()}
-                                  eventKey={`tum-${i}`}
-                                >
-                                  <img src={img.src} alt='Tum' />{' '}
-                                </Nav.Link>
-                              </Nav.Item>
+                              <Tab.Pane key={i} eventKey={`tum-${i}`}>
+                                <div className='product-large-img'>
+                                  <img src={img.src} alt='tum' />
+                                </div>
+                              </Tab.Pane>
                             ))}
-                        </Nav>
+                        </Tab.Content>
+
+                        {!upthumb && (
+                          <Nav as='ul' className='gallery-wrapper'>
+                            {product &&
+                              product.images.map((img, i) => (
+                                <Nav.Item as='li' key={i} className='small-img'>
+                                  <Nav.Link
+                                    as='a'
+                                    href='#'
+                                    onClick={(e) => e.preventDefault()}
+                                    eventKey={`tum-${i}`}
+                                  >
+                                    <img src={img.src} alt='Tum' />
+                                  </Nav.Link>
+                                </Nav.Item>
+                              ))}
+                          </Nav>
+                        )}
                       </div>
-                    )}
+                    </div>
                   </Tab.Container>
                 </div>
                 <div className='col-xl-6 col-lg-8'>
@@ -223,12 +226,12 @@ const Details = ({
                       {product && product.brand}
                     </a>
                   </div> */}
-                    <h2 className='pro-details-title mb-15'>
+                    <h2 className='pro-details-title mb-15 mt-4'>
                       {product && product.name}
                     </h2>
                     <div className='details-price mb-20'>
                       <span>
-                        {Number(product && product.mainPrice).toLocaleString()}{' '}
+                        {Number(product && product.mainPrice).toLocaleString()}
                         so&apos;m
                       </span>
                       {product && product.price && (
@@ -236,22 +239,21 @@ const Details = ({
                           {Number(product.price).toLocaleString()}so&apos;m
                         </span>
                       )}
+                    
                     </div>
+                   
                     <div className='product-variant'>
                       {product &&
                         product.colors &&
                         product.colors.length > 0 && (
                           <div className='product-color variant-item'>
                             <div className='variant-name'>
-                              <span>Colors</span>
+                              <span>Ranglar</span>
                             </div>
                             <ul className='shop-link shop-color'>
                               {product.colors.map((color) => (
                                 <li key={color}>
-                                  <a
-                                    href='#'
-                                    onClick={(e) => e.preventDefault()}
-                                  >
+                                  <a href='#' onClick={onRedirect}>
                                     <span className={color} />
                                   </a>
                                 </li>
@@ -289,6 +291,7 @@ const Details = ({
                           </div>
                         </div>
                       )}
+
                       {product && product.size && (
                         <div className='product-size variant-item'>
                           <div className='variant-name'>
@@ -306,10 +309,7 @@ const Details = ({
                                       : ''
                                   }
                                 >
-                                  <a
-                                    href='#'
-                                    onClick={(e) => e.preventDefault()}
-                                  >
+                                  <a href='#' onClick={onRedirect}>
                                     {size}
                                   </a>
                                 </li>
@@ -317,50 +317,48 @@ const Details = ({
                           </ul>
                         </div>
                       )}
-                      <div className='product-desc variant-item'>
+                      {/* <div className='product-desc variant-item'>
                         <p>{product && product.description}</p>
-                      </div>
+                      </div> */}
+                  
                       <div className='product-info-list variant-item'>
                         <ul>
                           <li className='text-capitalize'>
-                            <span>Brands:</span> {product && product.brand}
+                            <span>Brend:</span> {product && product.brand}
                           </li>
-                          <li>
+                          {/* <li>
                             <span>Product Code:</span>{' '}
                             {product &&
                               product.category[0].split('')[0] + product.id}
                           </li>
                           <li>
                             <span>Reward Points:</span> 100
-                          </li>
+                          </li> */}
                           <li>
                             <span>Stock:</span>{' '}
                             <span className='in-stock'>
                               {product && product.stock
-                                ? 'In Stock'
-                                : 'Out Of Stock'}
+                                ? 'Mavjud'
+                                : 'Mavjud emas'}
                             </span>
                           </li>
                         </ul>
                       </div>
+
                       <div className='product-action-details variant-item'>
                         <div className='product-details-action d-flex'>
                           <div className='product-quantity '>
                             <div className='cart-plus-minus'>
                               <p>{cart ? cart.qty : 1}</p>
                               <button
-                                disabled={cart ? false : true}
                                 className='dec qtybutton'
-                                onClick={(e) =>
-                                  cart && cart.qty !== 1 && onClickRemoveCart(e)
-                                }
+                                onClick={onRedirect}
                               >
                                 -
                               </button>
                               <button
-                                disabled={cart ? false : true}
                                 className='inc qtybutton'
-                                onClick={(e) => onClickCart(e)}
+                                onClick={onRedirect}
                               >
                                 +
                               </button>
@@ -371,7 +369,7 @@ const Details = ({
                               wishlist ? 'active' : ''
                             } details-action-icon`}
                             type='submit'
-                            onClick={(e) => onClickWishlist(e)}
+                            onClick={onRedirect}
                           >
                             <i className='fas fa-heart' />
                           </button>
@@ -381,15 +379,15 @@ const Details = ({
                         </div>
                         <div
                           className='details-cart mt-40'
-                          onClick={() => {
-                            window.location.href = product.link;
-                          }}
+                          onClick={onRedirect}
                         >
                           <button className='btn theme-btn'>
-                            purchase now
+                            Xarid qilish
                           </button>
                         </div>
                       </div>
+
+                    
                     </div>
                   </div>
                 </div>
@@ -403,20 +401,15 @@ const Details = ({
                           <Nav.Link
                             as='a'
                             href='#'
-                            onClick={(e) => e.preventDefault()}
+                            onClick={onRedirect}
                             eventKey='dec'
                           >
-                            Description{' '}
+                            Mahsulot tavsifi
                           </Nav.Link>
                         </Nav.Item>
                         <Nav.Item as='li'>
-                          <Nav.Link
-                            as='a'
-                            href='#'
-                            onClick={(e) => e.preventDefault()}
-                            eventKey='review'
-                          >
-                            Reviews (2)
+                          <Nav.Link onClick={onRedirect}>
+                            Sharhlar (185)
                           </Nav.Link>
                         </Nav.Item>
                       </Nav>
@@ -424,34 +417,14 @@ const Details = ({
                         <Tab.Pane eventKey='dec'>
                           <div className='desc-text'>
                             <p>
-                              Lorem ipsum dolor sit amet, consectetur
-                              adipisicing elit, sed do eiusmod tempor incididunt
-                              ut labore et dolore magna aliqua. Ut enim ad minim
-                              veniam, quis nostrud exercitation ullamco laboris
-                              nisi ut aliquip ex ea commodo consequat. Duis aute
-                              irure dolor in reprehenderit in voluptate velit
-                              esse cillum dolore eu fugiat nulla pariatur.
-                              Excepteur sint occaecat cupidatat non proident,
-                              sunt in culpa qui officia deserunt mollit anim id
-                              est laborum. Sed ut perspiciatis unde omnis iste
-                              natus error sit voluptatem accusantium doloremque
-                              laudantium, totam rem aperiam, eaque ipsa quae ab
-                              illo inventore veritatis et quasi architecto
-                              beatae vitae dicta sunt explicabo.
+                              Kalta paypoqlar (pyatki) tovonida silikon bilan
+                              qoplangan ayollar va erkaklar uchun.
                             </p>
-                            <p>
-                              Nemo enim ipsam voluptatem quia voluptas sit
-                              aspernatur aut odit aut fugit, sed quia
-                              consequuntur magni dolores eos qui ratione
-                              voluptatem sequi nesciunt. Neque porro quisquam
-                              est, qui dolorem ipsum quia dolor sit amet,
-                              consectetur, adipisci velit, sed quia non numquam
-                              eius modi tempora incidunt ut labore et dolore
-                              magnam aliquam quaerat voluptatem.
-                            </p>
+                            <p>Yoz va fitnes uchun ideal.</p>
+                            Tarkibida paxta, poliamid va spandeks qo&lsquo;shilgan.
                           </div>
                         </Tab.Pane>
-                        <Tab.Pane eventKey='review'>
+                        {/* <Tab.Pane eventKey='review'>
                           <div className='desc-text review-text'>
                             <div className='product-commnets'>
                               <div className='product-commnets-list mb-25 pb-15'>
@@ -576,16 +549,17 @@ const Details = ({
                               </form>
                             </div>
                           </div>
-                        </Tab.Pane>
+                        </Tab.Pane> */}
                       </Tab.Content>
                     </TabContainer>
                   </div>
                 </div>
                 <div className='col-xl-4 col-lg-4'>
                   <div className='pro-details-banner'>
-                    <Link href='/shop'>
-                      <img src='/img/banner/pro-details.jpg' alt='img' />
-                    </Link>
+                    <img
+                      src='https://images.uzum.uz/cj5cj4rltlh4bk4p2c4g/original.jpg'
+                      alt='img'
+                    />
                   </div>
                 </div>
               </div>

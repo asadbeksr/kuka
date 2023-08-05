@@ -9,7 +9,6 @@ import { getProducts } from "../redux/action/product";
 import { getProductByFilter } from "../utils/filterProduct";
 import { activeData, dblock } from "../utils/utils";
 import Layout from "./Layout";
-import PageTitle from "./PageTitle";
 
 const Shop = ({
   products,
@@ -21,14 +20,17 @@ const Shop = ({
 }) => {
   const [active, setActive] = useState(0);
   let sort = 6;
+
   useEffect(() => {
     getProducts();
   }, []);
 
+  console.log(products);
+  
   return (
     <Layout footerBg container textCenter sticky>
       <main>
-        <PageTitle active="Shop" pageHeading="Our Shop" />
+        {/* <PageTitle active="Shop" pageHeading="Our Shop" /> */}
         <section className="shop-area pt-100 pb-100">
           <div className="container">
             <div className="row">
@@ -45,7 +47,7 @@ const Shop = ({
                     <div className="col-xl-5 col-lg-5 col-md-6">
                       <div className="product-showing mb-40">
                         {/* Active sort product */}
-                        <p>{activeData(active, sort, products)}</p>
+                        {/* <p>{activeData(active, sort, products)}</p> */}
                       </div>
                     </div>
                     <div className="col-xl-7 col-lg-7 col-md-6">
