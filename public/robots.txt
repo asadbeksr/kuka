@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://the-kuka.uz
+
+# Sitemaps
+Sitemap: https://the-kuka.uz/sitemap.xml
