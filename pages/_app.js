@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }) {
           rel='apple-touch-icon'
           href='/img/favicons/apple-touch-icon.png'
         />
-        <link rel='manifest' href='/images/favicons/site.webmanifest' />
+        <link rel='manifest' href='/img/favicons/site.webmanifest' />
         <link
           rel='android-chrome'
           sizes='192x192'
