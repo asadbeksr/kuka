@@ -154,6 +154,8 @@ function MyApp({ Component, pageProps }) {
             `,
           }}
         />
+
+        <meta name='yandex-verification' content='c6dc08eab49ba6a2' />
       </Head>
       {preloader ? <PreLoader /> : <ScrollTop />}
       <AllToaster />
