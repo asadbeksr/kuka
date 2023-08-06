@@ -32,6 +32,8 @@ function MyApp({ Component, pageProps }) {
         <meta name='theme-color' content='#123e4e' />
         <meta name='robots' content='index,follow' />
 
+        <link rel='icon' href='/img/favicons/favicon.ico' type='image/x-icon' />
+
         <link
           rel='icon'
           type='image/png'
@@ -71,7 +73,7 @@ function MyApp({ Component, pageProps }) {
         />
 
         <meta property='og:type' content='website' />
-        
+
         <meta property='og:url' content='https://the-kuka.uz' />
         <meta
           property='og:title'
@@ -85,7 +87,6 @@ function MyApp({ Component, pageProps }) {
           property='og:image'
           content='https://www.the-kuka.uz/img/logo/logo.png'
         />
-        
 
         <meta property='og:site_name' content='THE KUKA' />
 
