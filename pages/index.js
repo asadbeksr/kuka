@@ -10,10 +10,45 @@ import { activeData, dblock } from '../src/utils/utils';
 
 const Products = ({ getProducts, products }) => {
   const [active, setActive] = useState(0);
+
+  const [data, setData] = useState([]);
   let sort = 12;
+
   useEffect(() => {
     getProducts();
   }, []);
+
+  const getProductsNew = () => {
+    fetch(
+      'https://api-seller.uzum.uz/api/seller/shop/6903/product/getProducts?searchQuery=&filter=active&sortBy=id&order=descending&size=99&page=0',
+      {
+        method: 'GET',
+        headers: {
+          Authorization: 'Bearer AC8J242V7jkFicfkSy3XMEYpp98',
+        },
+      }
+    ).then((res) => {
+      res.json().then((result) => {
+    
+        
+        if(result.productList.length > 0){
+          console.log(result);
+          setData(result);
+        }
+        
+
+      }).catch((err) => {
+        console.log(err);
+      });
+    });
+  };
+
+  useEffect(() => {
+    getProductsNew();
+  }, []);
+
+  
+
   return (
     <Layout sticky container footerBg textCenter>
       <main>
@@ -69,15 +104,15 @@ const Products = ({ getProducts, products }) => {
                   <TabContent>
                     <TabPane eventKey='grid'>
                       <div className='row'>
-                        {products &&
-                          products.map((product, i) => (
+                        {data &&
+                          data?.productList?.map((product, i) => (
                             <div
-                              className={`col-lg-3 col-md-4 col-xs-6 ${dblock(
+                              className={`col-lg-3 col-md-5 col-sm-4 ${dblock(
                                 active,
                                 i,
                                 sort
                               )}`}
-                              key={product.id}
+                              key={product.productId}
                             >
                               <Product product={product} />
                             </div>
@@ -99,7 +134,7 @@ const Products = ({ getProducts, products }) => {
                   active={active}
                   setActive={setActive}
                   sort={sort}
-                  length={products && products.length}
+                  length={data && data.totalProductsAmount}
                 />
               </div>
             </div>

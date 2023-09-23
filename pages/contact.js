@@ -1,10 +1,14 @@
 import Layout from '../src/layouts/Layout';
 import PageTitle from '../src/layouts/PageTitle';
+import useTranslation from 'next-translate/useTranslation';
+
 const Contact = () => {
+  const { t } = useTranslation('common');
+
   return (
     <Layout sticky container footerBg textCenter>
       <main>
-        <PageTitle active='contact' pageHeading='Aloqa' />
+        <PageTitle active='contact' pageHeading='contact' />
         <section
           className='pt-120 pb-90'
           data-background='/assets/img/bg/bg-map.png'
@@ -19,7 +23,7 @@ const Contact = () => {
                   }}
                 >
                   <i className='fas fa-envelope' />
-                  <h3>Email</h3>
+                  <h3>{t('email')}</h3>
                   <p>info@the-kuka.uz</p>
                 </div>
               </div>
@@ -31,7 +35,7 @@ const Contact = () => {
                   }}
                 >
                   <i className='fab fa-telegram'></i>
-                  <h3>Telegram</h3>
+                  <h3>{t('telegram')}</h3>
                   <p>@uzkuka</p>
                 </div>
               </div>
@@ -43,7 +47,7 @@ const Contact = () => {
                   }}
                 >
                   <i className='fas fa-phone' />
-                  <h3>Uyali aloqa</h3>
+                  <h3>{t('phone')}</h3>
                   <p>+998 97 158 93 33</p>
                 </div>
               </div>

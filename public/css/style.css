@@ -430,7 +430,7 @@ label {
 
 .theme-btn{
 
-	background: #fe4536;
+	background: red;
 
 	color: #fff;
 
@@ -2592,7 +2592,9 @@ img.secondary-img {
 
 .product-content h4 {
 
-	font-size: 20px;
+	font-weight: 400;
+	font-size: 16px;
+
 
 	margin-bottom: 15px;
 

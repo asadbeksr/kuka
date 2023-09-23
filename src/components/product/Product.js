@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
+import useTranslation from "next-translate/useTranslation";
 import { connect, useSelector } from "react-redux";
 import {
   addToCart,
@@ -20,6 +21,8 @@ const Product = ({
 }) => {
   const wishlist = useSelector((state) => state.utilis.wishlist);
   const compares = useSelector((state) => state.utilis.compares);
+
+  const { t, lang } = useTranslation("common");
 
   const [quickView, setQuickView] = useState(false);
   const [addCompare, setAddCompare] = useState(false);
@@ -75,10 +78,10 @@ const Product = ({
       />
 
       <div className="product-img mb-25">
-        <Link href={`/shop/${product.id}`}>
-          <a>
-            <img src={product.img1} alt="img 1" />
-            <img className="secondary-img" src={product.img2} alt="imge 2" />
+        <Link href={`https://uzum.uz/${lang}/product/${product.productId}`}>
+          <a target="_blank" >
+            <img src={product.image} alt="img 1" />
+            <img className="secondary-img" src={product.image} alt="imge 2" />
           </a>
         </Link>
 
@@ -122,16 +125,16 @@ const Product = ({
           <Link href={`/shop/${product.id}`}>{product.brand}</Link>
         </div> */}
         <h4>
-          <Link href={`/shop/${product.id}`}>{product.name}</Link>
+          <Link href={`/shop/${product.productId}`}>{product.title}</Link>
         </h4>
         <div className="product-meta">
           <div className="pro-price">
-            {product.price && (
+            {/* {product.price && (
               <span className="old-price">
                 {`${Number(product.price).toLocaleString()} so'm`}
               </span>
-            )}
-            <span>{`${Number(product.mainPrice).toLocaleString()} so'm`}</span>
+            )} */}
+            <span>{`${Number(product.price).toLocaleString()} ${t('som')}`}</span>
           </div>
         </div>
         {/* <div className="product-wishlist">

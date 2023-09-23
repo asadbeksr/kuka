@@ -3,8 +3,12 @@ import Slider from "react-slick";
 import VideoPopUp from "../src/components/VideoPopUp";
 import Layout from "../src/layouts/Layout";
 import PageTitle from "../src/layouts/PageTitle";
+import useTranslation from "next-translate/useTranslation";
 
 const About = () => {
+
+  const { t } = useTranslation('common')
+
   const [popup, setPopup] = useState(false);
   const settings = {
     dots: false,
@@ -14,10 +18,12 @@ const About = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+
   return (
     <Layout sticky footerBg textCenter container>
       <main>
-        <PageTitle pageHeading="Biz haqimizda" active="About" />
+        <PageTitle pageHeading="about" active="About" />
         {popup && <VideoPopUp closePopup={() => setPopup(false)} />}
         <section className="about-area pt-100">
           <div className="container">
@@ -30,7 +36,7 @@ const About = () => {
                 </div>
                 <div className="about-community mb-30">
                   <p>
-                Qulay va ommabop paypoqlar onlayn-do&apos;koni. Biz ishonchli ishlab chiqaruvchilarning sifatli paypoqlarini arzon narxlarda taklif qilamiz. Biz mijozlarimizni tinglaymiz. Savol yoki taklifingiz bo&apos;lsa, iltimos, telegramda murojat qiling - @uzkuka
+                    {t('description')}
                   </p>
                 </div>
               </div>
@@ -134,7 +140,7 @@ const About = () => {
             <div className="row">
               <div className="col-xl-12">
                 <div className="area-title text-center mb-50">
-                  <h2>Jamoa</h2>
+                  <h2>{t('team')}</h2>
                 </div>
               </div>
             </div>

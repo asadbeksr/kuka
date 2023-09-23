@@ -2267,6 +2267,18 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
+next-translate-plugin@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/next-translate-plugin/-/next-translate-plugin-2.5.3.tgz#e1ebe73104bb36e0fb5f49bc78afb86ec11fb779"
+  integrity sha512-P/cdU0Uk6KXnIKoMejBB7JiHxfkGGEffZtiOWrqJdisvdn2XPPjQ94r+YfBgHJIWXVIYF76JMMLCSzCPLb+mEg==
+  dependencies:
+    typescript "4.5.2"
+
+next-translate@1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/next-translate/-/next-translate-1.4.0.tgz#8e423ea9010019ac9573cb6c88412273f8210f77"
+  integrity sha512-FWheoN83fWTTfZ2g+a77GBcXRDVfSDP45iA0+G5wRZYE3xPYMy/6X+1I5j+ouczoJ2JI54vH59W/veZ1tZDRGQ==
+
 next@11.1.0:
   version "11.1.0"
   resolved "https://registry.yarnpkg.com/next/-/next-11.1.0.tgz#767d4c4fa0b9b0c768cdbd6c9f03dd86b5d701c0"
@@ -3430,6 +3442,11 @@ typed-array-length@^1.0.4:
     call-bind "^1.0.2"
     for-each "^0.3.3"
     is-typed-array "^1.1.9"
+
+typescript@4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.2.tgz#8ac1fba9f52256fdb06fb89e4122fa6a346c2998"
+  integrity sha512-5BlMof9H1yGt0P8/WF+wPNw6GfctgGjXp5hkblpyT+8rkASSmkUKMXrxR0Xg8ThVCi/JnHQiKXeBaEwCeQwMFw==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"

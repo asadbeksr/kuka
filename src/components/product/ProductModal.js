@@ -31,20 +31,20 @@ const ProductModal = ({
             <Tab.Container defaultActiveKey="tum-0">
               <div className="product-details-img mb-10">
                 <Tab.Content id="myTabContentpro">
-                  {product &&
+                  {/* {product &&
                     product.images.map((img, i) => (
                       <Tab.Pane key={i} eventKey={`tum-${i}`}>
                         <div className="product-large-img">
                           <img src={img.src} alt="tum" />
                         </div>
                       </Tab.Pane>
-                    ))}
+                    ))} */}
                 </Tab.Content>
               </div>
 
               <div className="shop-thumb-tab ">
                 <Nav as="ul">
-                  {product &&
+                  {/* {product &&
                     product.images.map((img, i) => (
                       <Nav.Item as="li" key={i}>
                         <Nav.Link
@@ -56,7 +56,7 @@ const ProductModal = ({
                           <img src={img.src} alt="Tum" />{" "}
                         </Nav.Link>
                       </Nav.Item>
-                    ))}
+                    ))} */}
                 </Nav>
               </div>
             </Tab.Container>
