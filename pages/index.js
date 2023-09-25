@@ -24,7 +24,7 @@ const Products = ({ getProducts, products }) => {
       {
         method: 'GET',
         headers: {
-          Authorization: 'Bearer 6lhcREbyOqAipzKQMwZ1gXLCwUU',
+          Authorization: 'Bearer 9Phekg43pDVHXIGId1t3cwxJvRA',
         },
       }
     ).then((res) => {
