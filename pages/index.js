@@ -7,6 +7,8 @@ import ProductListView from '../src/components/product/ProductListView';
 import Layout from '../src/layouts/Layout';
 import { getProducts } from '../src/redux/action/product';
 import { activeData, dblock } from '../src/utils/utils';
+import { fatchData } from "../src/utils/fatchData";
+
 
 const Products = ({ getProducts, products }) => {
   const [active, setActive] = useState(0);
@@ -18,29 +20,32 @@ const Products = ({ getProducts, products }) => {
     getProducts();
   }, []);
 
-  const getProductsNew = () => {
-    fetch(
-      'https://api-seller.uzum.uz/api/seller/shop/6903/product/getProducts?searchQuery=&filter=active&sortBy=id&order=descending&size=99&page=0',
-      {
-        method: 'GET',
-        headers: {
-          Authorization: 'Bearer 9Phekg43pDVHXIGId1t3cwxJvRA',
-        },
-      }
-    ).then((res) => {
-      res.json().then((result) => {
+  const getProductsNew = async () => {
+    const producstLocal = await fatchData("/static/products.json");
+    setData(producstLocal);
+
+    // fetch(
+    //   'https://api-seller.uzum.uz/api/seller/shop/6903/product/getProducts?searchQuery=&filter=active&sortBy=id&order=descending&size=99&page=0',
+    //   {
+    //     method: 'GET',
+    //     headers: {
+    //       Authorization: 'Bearer 9Phekg43pDVHXIGId1t3cwxJvRA',
+    //     },
+    //   }
+    // ).then((res) => {
+    //   res.json().then((result) => {
     
         
-        if(result.productList.length > 0){
-          console.log(result);
-          setData(result);
-        }
+    //     if(result.productList.length > 0){
+    //       console.log(result);
+    //       setData(result);
+    //     }
         
 
-      }).catch((err) => {
-        console.log(err);
-      });
-    });
+    //   }).catch((err) => {
+    //     console.log(err);
+    //   });
+    // });
   };
 
   useEffect(() => {
